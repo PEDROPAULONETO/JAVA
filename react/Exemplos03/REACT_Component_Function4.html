@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Naouse esta linha em produção: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root" ></div>
+
+    <script type="text/babel">
+        function Profile() {
+            return (
+                <img
+                  src="https://i.imgur.com/MK3eW3As.jpg"
+                  alt="Katherine Johnson"
+                />
+            );
+        }
+
+        function Name() {
+            return (
+                <h1>
+                Katherine Johnson
+                </h1>
+            );
+        }
+        function Bio() {
+            return (
+                <p>
+                Katherine Johnson was an American physicist, space scientist, and mathematician who played a crucial role in the early years of the United States space program.
+                </p>
+            );
+        }
+        function ProfileCard() {
+            return (
+                <div>
+                    <Profile />
+                    <Name />
+                    <Bio />
+                </div>
+            );
+        }
+        function Tick() {
+            return (
+                <div>
+                    <ProfileCard />
+                    <h2>It is {new Date().toLocaleTimeString()}.</h2>
+                </div>
+            );
+        }
+
+        const myStyle = {
+            textAlign: "center",
+            marginTop: "20px"
+        };
+        ReactDOM.render(<Tick />, document.getElementById("root"));
+        const rootElement = document.getElementById("root");
+        rootElement.style.textAlign = myStyle.textAlign;
+        rootElement.style.marginTop = myStyle.marginTop;
+        
+
+    </script>
+  </body>
+</html>
