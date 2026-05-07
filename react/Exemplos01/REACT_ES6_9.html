@@ -1,0 +1,26 @@
+<html>
+  <head> </head>
+  <body>
+    <p>Documento HTML</p>
+
+    <button class="botao-alerta">Alertar</button>
+    <button class="botao-alerta">Alertar</button>
+    <button class="botao-alerta">Alertar</button>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        alert("Hello, World!");
+      });
+    </script>
+
+    <script>
+      const botoes = document.getElementsByClassName("botao-alerta");
+
+      for (let i = 0; i < botoes.length; i++) {
+        botoes[i].addEventListener("click", () => {
+          alert("Hello, World!");
+        });
+      }
+    </script>
+  </body>
+</html>
